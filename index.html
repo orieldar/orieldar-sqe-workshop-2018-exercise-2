@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <style>
+            .table1{
+                font-family: arial, sans-serif;
+                 font-size:80%;
+                border-collapse: collapse;
+                width: 100%;
+                border: 1px solid #dddddd;
+
+            }
+
+            .table2{
+                font-family: arial, sans-serif;
+                font-size:80%;
+                border-collapse: collapse;
+                width: 80%;
+                vertical-align: top;
+                border: 1px solid #dddddd;
+            }
+
+
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 2px;
+            }
+
+            .table1 tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+
+            .table2 tr:nth-child(even) {
+                background-color: #b9c1d1;
+            }
+
+            .table2 th {
+                background-color: #c2bdb7;
+            }
+
+            .textAreaWrapper {
+                width: 100%;
+                height: 80vh;
+            }
+
+            .textAreaWrapper2 {
+                width: 100%;
+                height: 5vh;
+            }
+
+
+            textarea {
+                width: 80%;
+                height: 90%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <table class="table1" >
+            <tr>
+                <td>
+                    <div>
+                        <label>Enter code here</label>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <label>Visual table here</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <div class="textAreaWrapper2">
+                            <textarea id="inputPlaceholder" title="Enter Input Vector"></textarea>
+                          </div>
+                    <div class="textAreaWrapper">
+                        <textarea id="codePlaceholder" title="Enter code here"></textarea>
+                      </div>
+                    </div>
+                </td>
+                <td>
+                  <div>
+                      <div id="printedLines" class="textAreaWrapper">
+                     <textarea id="parsedCode" title="Parse code"></textarea>
+                     </div>
+                      <div id="box">
+                      <table id= "myTable" class="table2" >
+                      <tr>
+                        <th>Line</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Condition</th>
+                        <th>Value</th>
+                      </tr>
+                    </table>
+                  </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <button id="codeSubmissionButton">Parse code</button>
+                    </div>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+
+        <script src="dist/bundle.js"></script>
+    </body>
+</html>
